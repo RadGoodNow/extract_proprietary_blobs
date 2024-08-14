@@ -80,7 +80,7 @@ jobs:
     - name: Clone Firmware Dump
       run: |
         mkdir workspace && cd workspace
-        git clone ${{ env.FDR }} -b ${{ env.FDB }} ./firmware-dump
+        git clone --depth=2 ${{ env.FDR }} -b ${{ env.FDB }} ./firmware-dump
 
     - name: Clone Device Tree
       run: |
